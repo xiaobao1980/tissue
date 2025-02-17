@@ -11,6 +11,7 @@ from app.utils.spider.spider_exception import SpiderException
 
 class DmmSpider(Spider):
     host = "https://www.dmm.co.jp"
+    host = "https://www.dmm.com/"
     name = 'DMM'
 
     def get_info(self, num: str):
