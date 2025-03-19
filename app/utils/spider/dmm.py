@@ -14,7 +14,7 @@ class DmmSpider(Spider):
     host = "https://www.dmm.com/"
     name = 'DMM'
 
-    def get_info(self, num: str):
+    def get_info(self, num: str, url: str = None, include_downloads=False):
         url = self.get_real_page(num)
         response = self.session.get(url)
         if response.status_code == 404:

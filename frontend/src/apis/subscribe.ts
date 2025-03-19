@@ -24,11 +24,11 @@ export function deleteSubscribe(id: number) {
     })
 }
 
-export async function getVideos(num: string) {
+export async function searchVideo(param:any) {
     const response = await request.request({
-        url: '/subscribe/videos',
+        url: '/subscribe/search',
         method: 'get',
-        params: {num}
+        params: param
     })
     return response.data.data
 }
